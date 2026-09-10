@@ -1,24 +1,36 @@
 import board
 from kmk.kmk_keyboard import KMKKeyboard
-from kmk.scanners.keypad import MatrixScanner
+from kmk.scanners.keypad import KeysScanner
 from kmk.keys import KC
 
 keyboard = KMKKeyboard()
 
-# 1. DEFINE YOUR MATRIX CONNECTIONS
-# Look at your KiCad schematic. List the XIAO pins that connect to your rows/columns!
-keyboard.matrix = MatrixScanner(
-    column_pins=[board.D0, board.D1, board.D2],  # Replace with your 3 Column Pin names
-    row_pins=[board.D3, board.D4, board.D5],     # Replace with your 3 Row Pin names
+# This perfectly matches the exact traces snaking out of your XIAO in the image!
+keyboard.matrix = KeysScanner(
+    pins=[
+        board.D9,  # Physical Pin 11 -> Switch 1
+        board.D8,  # Physical Pin 10 -> Switch 2
+        board.D7,  # Physical Pin 9  -> Switch 3
+        board.D2,  # Physical Pin 3  -> Switch 4
+        board.D1,  # Physical Pin 2  -> Switch 5
+        board.D0,  # Physical Pin 1  -> Switch 6
+        board.D4,  # Physical Pin 6  -> Switch 7
+        board.D5,  # Physical Pin 5  -> Switch 8
+    ]
 )
 
-# 2. DEFINE YOUR VISUAL 3-2-3 LAYOUT
-# We use KC.NO to leave a structural "blank gap" for the missing key in the middle column.
+# This assigns actual keyboard functions to your 8 switches (ordered Switch 1 through 8).
+# Right now, they map to numbers 1 through 8. You can change these anytime!
 keyboard.keymap = [
     [
-        KC.A,    KC.D,    KC.F,  # Top Row    (Col 0, Col 1, Col 2)
-        KC.B,    KC.E,    KC.G,  # Middle Row (Col 0, Col 1, Col 2)
-        KC.C,    KC.NO,   KC.H,  # Bottom Row (Col 0, Structural Gap, Col 2)
+        KC.N1,  # Switch 1
+        KC.N2,  # Switch 2
+        KC.N3,  # Switch 3
+        KC.N4,  # Switch 4
+        KC.N5,  # Switch 5
+        KC.N6,  # Switch 6
+        KC.N7,  # Switch 7
+        KC.N8,  # Switch 8
     ]
 ]
 
