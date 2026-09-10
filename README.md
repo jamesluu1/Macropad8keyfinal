@@ -26,3 +26,10 @@ Pcb
 
 Firmware 
 If I'm being completely honest, I never intended to learn how to code or build firmware so i utilised ai to help me with the KMK firmware as I wasnt able to find any QMK firmware for my specific design
+
+
+PARTS TO MAKE THIS
+- 8 cherry Mx switches
+- 8 DSA keycaps
+- 4 M3x16mm SHCS Bolts
+- 
