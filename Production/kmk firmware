@@ -1,0 +1,38 @@
+import board
+from kmk.kmk_keyboard import KMKKeyboard
+from kmk.scanners.keypad import KeysScanner
+from kmk.keys import KC
+
+keyboard = KMKKeyboard()
+
+# This perfectly matches the exact traces snaking out of your XIAO in the image!
+keyboard.matrix = KeysScanner(
+    pins=[
+        board.D9,  # Physical Pin 11 -> Switch 1
+        board.D8,  # Physical Pin 10 -> Switch 2
+        board.D7,  # Physical Pin 9  -> Switch 3
+        board.D2,  # Physical Pin 3  -> Switch 4
+        board.D1,  # Physical Pin 2  -> Switch 5
+        board.D0,  # Physical Pin 1  -> Switch 6
+        board.D4,  # Physical Pin 6  -> Switch 7
+        board.D5,  # Physical Pin 5  -> Switch 8
+    ]
+)
+
+# This assigns actual keyboard functions to your 8 switches (ordered Switch 1 through 8).
+# Right now, they map to numbers 1 through 8. You can change these anytime!
+keyboard.keymap = [
+    [
+        KC.N1,  # Switch 1
+        KC.N2,  # Switch 2
+        KC.N3,  # Switch 3
+        KC.N4,  # Switch 4
+        KC.N5,  # Switch 5
+        KC.N6,  # Switch 6
+        KC.N7,  # Switch 7
+        KC.N8,  # Switch 8
+    ]
+]
+
+if __name__ == '__main__':
+    keyboard.go()
