@@ -32,4 +32,6 @@ PARTS TO MAKE THIS
 - 8 cherry Mx switches
 - 8 DSA keycaps
 - 4 M3x16mm SHCS Bolts
-- 
+- 8 1N4148 DO-35 Diodes.
+- 1 XIAO RP2040
+- 1 Case (2 printed parts, the top and the base)
