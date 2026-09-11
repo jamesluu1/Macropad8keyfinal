@@ -18,7 +18,7 @@ It utilises 4 M3 screws to lock in place the Case top with the base (2 part case
 PCB
 
 Schematic
-<img width="491" height="290" alt="Screenshot 2026-09-03 201702" src="https://github.com/user-attachments/assets/e564c589-0e88-4bc1-acdb-ad0f3ccba744" />
+<img width="580" height="231" alt="image" src="https://github.com/user-attachments/assets/7059b0b4-a9c0-497d-9fbc-e65e2026772b" />
 
 
 Pcb 
