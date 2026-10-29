@@ -4,6 +4,7 @@ This is an 8 key macropad intended to assist you in functions like copy paste or
 It utilises 8 cherry mx keys, a fully 3d printed case running on Seeedstudio Xiao RP2040
 
 
+<img width="161" height="132" alt="image" src="https://github.com/user-attachments/assets/86fbc9ed-3676-4ef3-b171-cde759f069a0" />
 
 
 CAD 
